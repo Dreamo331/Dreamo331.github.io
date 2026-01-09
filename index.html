@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="images/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>视频解析</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-text">视频解析</h1>
+        <div class="input-container">
+            <div class="prefix">输入URL：</div>
+            <input 
+                type="text" 
+                id="userInput" 
+                class="user-input" 
+                placeholder="请在此处输入URL..."
+            >
+        </div>
+       
+        <div class="button-group">
+            <button class="btn btn-primary" id="combineBtn">拼合URL</button>
+            <button class="btn btn-secondary" id="navigateBtn">跳转到网页</button>
+        </div>
+        
+        <div class="result-container">
+            <div class="result-label">拼合后的URL：</div>
+            <div id="result">当前无已经拼合的URL</div>
+        </div>
+        
+        <div class="instructions">
+            <h3 class="URLyq">URL格式要求：</h3>
+            <ul>
+                <li>必须以 http:// 或 https:// 开头</li>
+                <li>网页设计：梦之翼官方；网页优化：DeepSeek；后期修改：梦之翼官方</li>
+              <p class="center-text red-text">本网站仅限个人使用，请勿用于任何商业用途</p>
+            </ul>
+          <p class="footer">© 2026 梦之翼. 保留所有权利.</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
