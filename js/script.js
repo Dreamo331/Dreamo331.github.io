@@ -104,3 +104,38 @@
         userInput.addEventListener('focus', function() {
             this.select();
         });
+//------------------------------------------测试开发部分--------------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadBtn = document.querySelector('.download-label');
+    const downloadInput = document.querySelector('.download-input');
+    
+    downloadBtn.addEventListener('click', function(e) {
+      if (downloadInput.checked) return;
+      
+      setTimeout(function() {
+        const downloadUrl = 'https://raw.githubusercontent.com/Dreamo331/Dreamo331.github.io/main/client/video_parser.exe';
+        
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = '视频解析客户端.exe';
+        
+        link.addEventListener('error', function() {
+          console.error('下载失败，尝试备用链接...');
+          
+          const backupUrl = 'https://raw.githubusercontent.com/Dreamo331/Dreamo331.github.io/refs/heads/main/client/video_parser.exe';
+          
+          window.open('https://github.com/Dreamo331/Dreamo331.github.io/blob/main/client/video_parser.exe?raw=true', '_blank');
+          
+          alert('如果自动下载失败，请手动访问GitHub页面下载文件。');
+        });
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        console.log('客户端下载已开始...');
+        
+      }, 500);
+    });
+  });
